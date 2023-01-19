@@ -53,11 +53,11 @@
   # Sublime Text 3 on Windows:
   # editor = 'c:/Program Files/Sublime Text 3/subl.exe' -w
   #
-  # VSCode
+  # VIM
   editor = vim 
   # Don't consider trailing space change as a cause for merge conflicts
   whitespace = -trailing-space
-	autocrlf = input
+  autocrlf = input
 [diff]
   # Use better, descriptive initials (c, i, w) instead of a/b.
   mnemonicPrefix = true
@@ -67,10 +67,8 @@
   wordRegex = .
   # Display submodule-related information (commit listings)
   submodule = log
-  # Use VSCode as default diff tool when running `git diff-tool`
-  tool = vscode
-[difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+  # Use VIM as default diff tool when running `git diff-tool`
+  tool = vimdiff
 [fetch]
   # Auto-fetch submodule changes (sadly, won't auto-update)
   recurseSubmodules = on-demand
@@ -102,6 +100,8 @@
   # [merge "npm-merge-driver"]
   # name = automatically merge npm lockfiles
   # driver = npx npm-merge-driver merge %A %O %B %P
+	tool = vimdiff
+	conflictstyle = diff3
 [mergetool]
   # Clean up backup files created by merge tools on tool exit
   keepBackup = false
@@ -110,7 +110,7 @@
   # Put the temp files in a dedicated dir anyway
   writeToTemp = true
   # Auto-accept file prompts when launching merge tools
-  prompt = false
+	prompt = false
 # [page]
   # Use custom pager to get an better log on terminal.
   # As this is an external tool it has to be installed.
@@ -163,3 +163,5 @@
   prereleaseSuffix = .beta
   prereleaseSuffix = -rc
   prereleaseSuffix = .rc
+[init]
+	defaultBranch = master
