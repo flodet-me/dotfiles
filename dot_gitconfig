@@ -165,3 +165,5 @@
   prereleaseSuffix = .rc
 [init]
 	defaultBranch = master
+[sequence]
+	editor = interactive-rebase-tool
