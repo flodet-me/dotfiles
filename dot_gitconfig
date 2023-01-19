@@ -57,6 +57,7 @@
   editor = vim 
   # Don't consider trailing space change as a cause for merge conflicts
   whitespace = -trailing-space
+	autocrlf = input
 [diff]
   # Use better, descriptive initials (c, i, w) instead of a/b.
   mnemonicPrefix = true
